@@ -122,6 +122,14 @@ img {
 .header__contacts a:focus {
   color: var(--blue);
 }
+.header__contacts > li:before {
+  content: url("/images/icons.svg#icon-phone");
+  width: 10px;
+  height: 16px;
+  display: inline-block;
+  background-image: url("/images/icons.svg#icon-phone");
+  background-size: contain;
+}
 
 /*------------------------- main ----------------------------*/
 /*------------------------- hero ----------------------------*/
@@ -129,6 +137,19 @@ img {
   background-color: var(--bg);
   padding-top: 200px;
   padding-bottom: 200px;
+}
+.overlay {
+  margin: auto;
+  width: min(100%, 1600px);
+  background-image: linear-gradient(
+      to right,
+      rgba(58, 51, 47, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .hero_title {
   margin: 0 auto 30px auto;
