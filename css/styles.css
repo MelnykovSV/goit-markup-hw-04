@@ -50,6 +50,9 @@ ul {
 img {
   display: block;
 }
+a {
+  display: block;
+}
 /*------------------------- header ----------------------------*/
 .header {
   border-bottom: 1px solid var(--border-header);
@@ -115,6 +118,8 @@ img {
 }
 .header__email,
 .header__tel {
+  display: flex;
+  align-items: center;
   padding: 32px 0;
   color: inherit;
 }
@@ -122,13 +127,18 @@ img {
 .header__contacts a:focus {
   color: var(--blue);
 }
-.header__contacts > li:before {
-  content: url("/images/icons.svg#icon-phone");
-  width: 10px;
-  height: 16px;
-  display: inline-block;
-  background-image: url("/images/icons.svg#icon-phone");
-  background-size: contain;
+
+.header__contacts svg {
+  display: block;
+  margin-right: 10px;
+  fill: var(--default-gray);
+}
+
+.header__email:hover > .mail__icon,
+.header__email:focus > .mail__icon,
+.header__tel:focus > .phone__icon,
+.header__tel:hover > .phone__icon {
+  fill: var(--blue);
 }
 
 /*------------------------- main ----------------------------*/
@@ -216,6 +226,9 @@ img {
 .features-item__description {
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
+}
+.features-item__icon {
+  fill: red;
 }
 
 /*------------------------- services ----------------------------*/
@@ -424,4 +437,8 @@ img {
   line-height: calc(30 / 16);
   letter-spacing: 0.03em;
   color: var(--default-gray);
+}
+
+.test-svg {
+  fill: red;
 }
